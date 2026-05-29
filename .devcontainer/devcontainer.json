@@ -1,0 +1,22 @@
+{
+    "name": "Ambiente Python & SQL (SQLite)",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    // Configurações e Extensões automáticas do VS Code na Nuvem
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",              // Suporte a Python
+                "ms-toolsai.jupyter",            // Suporte a Notebooks Jupyter
+                "qwtel.sqlite-viewer",           // Visualizador gráfico do arquivo .db
+                "mtxr.sqltools",                 // Gerenciador de conexões SQL
+                "mtxr.sqltools-driver-sqlite"    // Driver SQLite para o SQLTools
+            ]
+        }
+    },
+    // Comando executado automaticamente após a criação do ambiente
+    "postCreateCommand": "pip install --upgrade pip && pip install ipython-sql SQLAlchemy pandas",
+    
+    "remoteUser": "vscode"
+}
